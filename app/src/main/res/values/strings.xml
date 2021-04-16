@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppDemo</string>
+    <string name="text_login">Login</string>
+    <string name="text_title_login">Faça o Login</string>
+    <string name="text_users">Usuários</string>
+    <string name="text_list_users">Lista Usuários</string>
+</resources>
