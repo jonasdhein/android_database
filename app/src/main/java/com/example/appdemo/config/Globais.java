@@ -1,7 +1,11 @@
 package com.example.appdemo.config;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.widget.Toast;
+
+import com.example.appdemo.view.ListaUsuariosActivity;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -28,8 +32,24 @@ public class Globais {
                 md5 = "0" + md5;
 
             return md5;
+
         } catch (NoSuchAlgorithmException e) {
             return null;
+        }
+    }
+
+    public static void abrirActivity(Context context, Class destino, boolean fechar){
+        try{
+            Activity act = (Activity) context;
+
+            Intent tela = new Intent(context, destino);
+            context.startActivity(tela);
+            if(fechar){
+                act.finish();
+            }
+
+        }catch (Exception ex){
+
         }
     }
 

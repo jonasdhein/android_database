@@ -1,7 +1,13 @@
 <resources>
-    <string name="app_name">AppDemo</string>
+    <string name="app_name">App</string>
     <string name="text_login">Login</string>
     <string name="text_title_login">Faça o Login</string>
     <string name="text_users">Usuários</string>
-    <string name="text_list_users">Lista Usuários</string>
+    <string name="text_list_users">Lista de Usuários</string>
+    <string name="title_menu_ok">Salvar</string>
+    <string name="title_menu_cancel">Voltar</string>
+    <string name="mail_text">Email</string>
+    <string name="phone_text">Telefone</string>
+    <string name="password_text">Senha</string>
+    <string name="delete_text">Excluir</string>
 </resources>
