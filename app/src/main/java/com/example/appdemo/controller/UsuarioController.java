@@ -46,6 +46,7 @@ public class UsuarioController {
                 objeto.setSenha(resultado.getString(resultado.getColumnIndexOrThrow("senha")));
                 objeto.setEmail(resultado.getString(resultado.getColumnIndexOrThrow("email")));
                 objeto.setTelefone(resultado.getString(resultado.getColumnIndexOrThrow("telefone")));
+                objeto.setTipo(resultado.getInt(resultado.getColumnIndexOrThrow("tipo")));
             }
 
             return objeto;
@@ -74,6 +75,7 @@ public class UsuarioController {
                 objeto.setSenha(resultado.getString(resultado.getColumnIndexOrThrow("senha")));
                 objeto.setEmail(resultado.getString(resultado.getColumnIndexOrThrow("email")));
                 objeto.setTelefone(resultado.getString(resultado.getColumnIndexOrThrow("telefone")));
+                objeto.setTipo(resultado.getInt(resultado.getColumnIndexOrThrow("tipo")));
             }
 
             return objeto;
@@ -92,6 +94,7 @@ public class UsuarioController {
             valores.put("senha", objeto.getSenha());
             valores.put("email", objeto.getEmail());
             valores.put("telefone", objeto.getTelefone());
+            valores.put("tipo", objeto.getTipo());
 
             conexao.insertOrThrow(Tabelas.TB_USUARIOS, null, valores);
 
@@ -111,6 +114,7 @@ public class UsuarioController {
             valores.put("senha", objeto.getSenha());
             valores.put("email", objeto.getEmail());
             valores.put("telefone", objeto.getTelefone());
+            valores.put("tipo", objeto.getTipo());
 
             String[] parametros = new String[1];
             parametros[0] = String.valueOf(objeto.getId());
@@ -160,6 +164,7 @@ public class UsuarioController {
                     objeto.setLogin(resultado.getString(resultado.getColumnIndexOrThrow("login")));
                     objeto.setEmail(resultado.getString(resultado.getColumnIndexOrThrow("email")));
                     objeto.setTelefone(resultado.getString(resultado.getColumnIndexOrThrow("telefone")));
+                    objeto.setTipo(resultado.getInt(resultado.getColumnIndexOrThrow("tipo")));
 
                     listagem.add(objeto);
 

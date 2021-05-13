@@ -7,6 +7,7 @@ public class Usuario {
     private String senha;
     private String telefone;
     private String email;
+    private int tipo;
 
     public int getId() {
         return id;
@@ -46,6 +47,14 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
     }
 
     @Override

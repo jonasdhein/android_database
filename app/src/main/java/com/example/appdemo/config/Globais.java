@@ -3,6 +3,7 @@ package com.example.appdemo.config;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.appdemo.view.ListaUsuariosActivity;
@@ -18,6 +19,21 @@ public class Globais {
             Toast.makeText(context, mensagem, Toast.LENGTH_LONG).show();
         }catch (Exception ex){
 
+        }
+    }
+
+    public static void selecionaSpinner(Spinner spnr, Object campo) {
+        try {
+            for (int i = 0; i < spnr.getAdapter().getCount(); i++) {
+                String wPos = spnr.getItemAtPosition(i).toString().toLowerCase();
+                if (wPos.equals(campo.toString().toLowerCase())) {
+                    spnr.setSelection(i);
+                    break;
+                }
+            }
+
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
         }
     }
 

@@ -10,4 +10,11 @@
     <string name="phone_text">Telefone</string>
     <string name="password_text">Senha</string>
     <string name="delete_text">Excluir</string>
+    <string name="tipoUsuario_text">Tipo de Usuário</string>
+
+    <string-array name="tipo_usuario">
+        <item></item>
+        <item>Administrador</item>
+        <item>Usuário</item>
+    </string-array>
 </resources>

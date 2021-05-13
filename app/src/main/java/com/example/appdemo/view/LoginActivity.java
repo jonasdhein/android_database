@@ -34,16 +34,23 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UsuarioController controller = new UsuarioController(context);
-                Usuario user = controller.login(txtUsuario.getText().toString(), txtSenha.getText().toString());
-                if(user != null){
+                //validar dados de acesso
+                if(!txtUsuario.getText().toString().equals("") &&
+                        !txtSenha.getText().toString().equals("")) {
 
-                    Intent tela = new Intent(context, MainActivity.class);
-                    startActivity(tela);
-                    finish();
+                    UsuarioController controller = new UsuarioController(context);
+                    Usuario user = controller.login(txtUsuario.getText().toString(), txtSenha.getText().toString());
+                    if (user != null) {
 
+                        Intent tela = new Intent(context, MainActivity.class);
+                        startActivity(tela);
+                        finish();
+
+                    } else {
+                        Globais.exibirMensagem(context, "Usuário/Senha inválido");
+                    }
                 }else{
-                    Globais.exibirMensagem(context, "Usuário/Senha inválido");
+                    Globais.exibirMensagem(context, "Informe corretamente usuário e senha");
                 }
             }
         });

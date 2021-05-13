@@ -67,6 +67,17 @@
         app:keep_hint="true"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LabelBold"
+        android:text="@string/tipoUsuario_text" />
+
+    <Spinner
+        android:id="@+id/spiTipoUsuario_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/btnExcluir_usuario"
         android:layout_width="wrap_content"
